@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/utility.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Post One</title>
+</head>
+<body id="home">
+  <header class="hero blog">
+    <div class="navbar top" id="navbar">
+      <h1 class="logo">
+       <span class="text-primary"><i class="fas fa-book-open"></i>Edge</span>Ledger
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#cases">Cases</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="post bg-light">
+      <h2>Blog Post One</h2>
+      <p class="meta">
+        <i class="fas fa-user"></i> Posted by <strong>Chichi Mbah</strong> | April 27 2021
+      </p>
+      <img src="./img/blog 3.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos architecto molestiae alias, eaque quasi, suscipit ut itaque iste consequuntur totam unde, repudiandae nesciunt reiciendis fugiat commodi autem natus tempore?</p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident soluta tempora nam eligendi possimus repellendus corporis veniam quas, placeat, recusandae molestias laudantium officia dolore! Fugit possimus eligendi totam alias tenetur laboriosam. Eligendi iste nulla ducimus deserunt tempore enim architecto sit repudiandae. Eos odio tenetur modi nostrum vel quasi, et incidunt, quos ea harum similique deserunt voluptatum natus quaerat quam aliquid.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illum architecto quos facilis voluptas, dignissimos blanditiis culpa tempore doloremque placeat expedita quibusdam non ad laudantium necessitatibus sequi nesciunt veritatis pariatur repellat? Repellat repellendus cumque rerum in? Ex nihil cum consequuntur eum suscipit facere veniam placeat reprehenderit dolore, architecto aliquid error!
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2020 - EdgeLedger</p>
+  </footer>
+
+  <script>
+  const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function() {
+      if(window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if(!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else{
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
+</body>
+</html>
